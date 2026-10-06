@@ -1,3 +1,4 @@
+import { UiIcon } from "@/components/shared/ui-icon";
 import Link from "@/components/shared/page-link";
 export default function NotFound() {
   return (
@@ -10,7 +11,7 @@ export default function NotFound() {
         href="/events"
         className="rounded-full bg-black px-6 py-3 text-white"
       >
-        กลับไปดูกิจกรรมทั้งหมด →
+        กลับไปดูกิจกรรมทั้งหมด <UiIcon name="right" />
       </Link>
     </main>
   );

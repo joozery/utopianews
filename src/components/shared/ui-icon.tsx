@@ -1,4 +1,4 @@
-type IconName = "up-right" | "right" | "left" | "down" | "close" | "plus" | "check" | "pin" | "copy";
+type IconName = "up-right" | "right" | "left" | "down" | "close" | "plus" | "check" | "pin" | "copy" | "asterisk";
 
 const paths: Record<IconName, string> = {
   "up-right": "M7 17 17 7M7 7h10v10",
@@ -10,6 +10,7 @@ const paths: Record<IconName, string> = {
   check: "m5 12 4 4L19 6",
   pin: "M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0ZM12 7a3 3 0 1 0 0 6 3 3 0 0 0 0-6",
   copy: "M9 9h11v11H9ZM15 5V3H3v12h2",
+  asterisk: "M12 3v18M3 12h18M5.6 5.6l12.8 12.8M5.6 18.4 18.4 5.6",
 };
 
 export function UiIcon({ name }: { name: IconName }) {

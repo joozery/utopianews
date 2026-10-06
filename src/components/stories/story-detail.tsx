@@ -81,7 +81,9 @@ export function StoryDetail({ story }: { story: Story }) {
           <article className={styles.article}>
             <p className={styles.lead}>{story.description}</p>
             <StoryContent blocks={blocks} />
-            <div className={styles.endMark}>✳</div>
+            <div className={styles.endMark} aria-hidden="true">
+              <UiIcon name="asterisk" />
+            </div>
             <section id="sources" className={styles.sources}>
               <h2>แหล่งข้อมูลและอ่านเพิ่มเติม</h2>
               {sources.map((source) => (

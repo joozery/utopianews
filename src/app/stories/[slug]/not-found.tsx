@@ -1,3 +1,4 @@
+import { UiIcon } from "@/components/shared/ui-icon";
 import Link from "@/components/shared/page-link";
 
 export default function StoryNotFound() {
@@ -10,7 +11,7 @@ export default function StoryNotFound() {
         href="/stories"
         className="rounded-full bg-black px-6 py-3 text-white"
       >
-        กลับไปอ่านเรื่องราวอื่น →
+        กลับไปอ่านเรื่องราวอื่น <UiIcon name="right" />
       </Link>
     </main>
   );

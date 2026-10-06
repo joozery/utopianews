@@ -1,3 +1,4 @@
+import { UiIcon } from "@/components/shared/ui-icon";
 import Image from "next/image";
 import Link from "@/components/shared/page-link";
 import { StoryShell } from "@/components/stories/story-shell";
@@ -50,7 +51,7 @@ export default function Page() {
               และค้นพบแรงบันดาลใจที่ทำให้ชีวิตประจำวันมีความหมายมากขึ้น
             </p>
             <Link href="/stories" className={styles.primaryButton}>
-              สำรวจเรื่องราวทั้งหมด <span aria-hidden="true">↗</span>
+              สำรวจเรื่องราวทั้งหมด <span aria-hidden="true"><UiIcon name="up-right" /></span>
             </Link>
           </div>
           <figure className={styles.image}>
@@ -90,7 +91,7 @@ export default function Page() {
             <p>พบหนังดี งานสร้างสรรค์ และบทสนทนาใหม่ ๆ ผ่านกิจกรรมของ Utopia</p>
           </div>
           <Link href="/events" className={styles.secondaryButton}>
-            ดูกิจกรรมของเรา <span aria-hidden="true">↗</span>
+            ดูกิจกรรมของเรา <span aria-hidden="true"><UiIcon name="up-right" /></span>
           </Link>
         </section>
       </main>

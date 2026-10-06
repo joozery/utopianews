@@ -1,3 +1,4 @@
+import { UiIcon } from "@/components/shared/ui-icon";
 import Link from "@/components/shared/page-link";
 export default function NotFound() {
   return (
@@ -7,7 +8,7 @@ export default function NotFound() {
         href="/stories"
         className="rounded-full bg-black px-6 py-3 text-white"
       >
-        ดูเรื่องราวทั้งหมด →
+        ดูเรื่องราวทั้งหมด <UiIcon name="right" />
       </Link>
     </main>
   );
