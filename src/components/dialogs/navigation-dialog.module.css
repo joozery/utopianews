@@ -1,0 +1,134 @@
+.overlay[data-state="open"] {
+  animation: backdropIn 280ms ease-out both;
+}
+.overlay[data-state="closed"] {
+  animation: backdropOut 240ms ease-in both;
+}
+.panel {
+  box-shadow: -20px 0 80px #0002;
+}
+.panel[data-state="open"] {
+  animation: panelIn 380ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.panel[data-state="closed"] {
+  animation: panelOut 240ms cubic-bezier(0.4, 0, 1, 1) both;
+  pointer-events: none;
+}
+.panel[data-state="open"] .intro {
+  animation: itemIn 340ms ease-out 70ms both;
+}
+.panel[data-state="open"] .item {
+  animation: itemIn 340ms cubic-bezier(0.22, 1, 0.36, 1)
+    var(--menu-item-delay, 80ms) both;
+}
+.panel nav .item {
+  transition:
+    color 0.2s,
+    padding-left 0.2s,
+    background 0.2s;
+}
+.panel nav .item:hover {
+  color: #4e6e42;
+  padding-left: 8px;
+  background: #f6f8f3;
+}
+.item > span {
+  transition: transform 0.2s;
+}
+.item:hover > span {
+  transform: translateX(4px);
+}
+.close {
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+.close:hover {
+  transform: rotate(90deg);
+  background: #edf1e8;
+}
+.close:active {
+  transform: rotate(90deg) scale(0.9);
+}
+@keyframes backdropIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes backdropOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes panelIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0.7;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes panelOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0.7;
+  }
+}
+@keyframes itemIn {
+  from {
+    opacity: 0;
+    transform: translateX(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .panel[data-state],
+  .overlay[data-state],
+  .panel[data-state="open"] .item,
+  .panel[data-state="open"] .intro {
+    animation: none;
+  }
+  .panel nav .item,
+  .item > span,
+  .close {
+    transition: none;
+  }
+  .panel nav .item:hover {
+    padding-left: 0;
+  }
+  .item:hover > span,
+  .close:hover,
+  .close:active {
+    transform: none;
+  }
+}
+
+.panel nav .item[aria-current="page"] {
+  font-weight: 600;
+}
+.panel nav .item[aria-current="page"]::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  align-self: center;
+  margin-right: 12px;
+}
+.panel nav .item[aria-current="page"] > span {
+  margin-left: auto;
+}

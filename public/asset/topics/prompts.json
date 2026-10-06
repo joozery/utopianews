@@ -1,0 +1,25 @@
+{
+  "tool": "built-in image_gen",
+  "prompts": [
+    {
+      "name": "city",
+      "prompt": "Use case: photorealistic-natural. Asset type: Thai editorial news website category tile. Create one sharp, high resolution portrait photograph, 2:3 aspect ratio. Warm natural light, realistic textures, candid refined documentary photography, coherent editorial style. Subject must be immediately recognizable at small thumbnail size, centered within middle 70 percent, lower quarter slightly quieter for website text overlay. No text, lettering, logo, watermark, frames or collage. Scene: charming Bangkok neighborhood community cafe opening onto a walkable old shophouse lane, a few Thai neighbors chatting at a small outdoor table, greenery and textured facades. Emphasize the welcoming shared urban space."
+    },
+    {
+      "name": "lifestyle",
+      "prompt": "Use case: photorealistic-natural. Asset type: Thai editorial news website category tile. Create one sharp, high resolution portrait photograph, 2:3 aspect ratio. Warm natural light, realistic textures, candid refined documentary photography, coherent editorial style. Subject must be immediately recognizable at small thumbnail size, centered within middle 70 percent, lower quarter slightly quieter for website text overlay. No text, lettering, logo, watermark, frames or collage. Scene: close three-quarter view of a ceramic latte cup with crisp latte art on a cafe table, a barista's hands gently placing it, warm coffee bar atmosphere in background. Coffee is the clear hero."
+    },
+    {
+      "name": "people",
+      "prompt": "Use case: photorealistic-natural. Asset type: Thai editorial news website category tile. Create one sharp, high resolution portrait photograph, 2:3 aspect ratio. Warm natural light, realistic textures, candid refined documentary photography, coherent editorial style. Subject must be immediately recognizable at small thumbnail size, centered within middle 70 percent, lower quarter slightly quieter for website text overlay. No text, lettering, logo, watermark, frames or collage. Scene: candid medium portrait of an adult Thai artisan at a wooden workbench, hands working a small handmade object, friendly focused expression, workshop tools and warm urban studio. Face and working hands clearly visible."
+    },
+    {
+      "name": "culture",
+      "prompt": "Use case: photorealistic-natural. Asset type: Thai editorial news website category tile. Create one sharp, high resolution portrait photograph, 2:3 aspect ratio. Warm natural light, realistic textures, candid refined documentary photography, coherent editorial style. Subject must be immediately recognizable at small thumbnail size, centered within middle 70 percent, lower quarter slightly quieter for website text overlay. No text, lettering, logo, watermark, frames or collage. Scene: artist's hands shaping a ceramic bowl on a pottery wheel in a creative Bangkok studio, handmade clay vessels and craft tools behind. Clay and the act of making clearly recognizable."
+    },
+    {
+      "name": "business",
+      "prompt": "Use case: photorealistic-natural. Asset type: Thai editorial news website category tile. Create one sharp, high resolution portrait photograph, 2:3 aspect ratio. Warm natural light, realistic textures, candid refined documentary photography, coherent editorial style. Subject must be immediately recognizable at small thumbnail size, centered within middle 70 percent, lower quarter slightly quieter for website text overlay. No text, lettering, logo, watermark, frames or collage. Scene: adult Thai local shop owner standing at the counter of a small neighborhood store, welcoming smile, orderly unbranded goods on shelves, wood and natural warm light. Person and small business setting both visible."
+    }
+  ]
+}
