@@ -338,14 +338,7 @@ h2 { font-family: Georgia, 'Times New Roman', var(--font-noto-sans-thai), serif;
   .footer-top nav a { min-height:40px; display:inline-flex; align-items:center; }
 }
 @media (max-width: 480px) {
-  .latest-grid { grid-template-columns:minmax(0,1fr); gap:18px; }
-  .latest-story-photo { aspect-ratio:1.55; }
-  .latest-story-body { padding:18px; }
-  .latest-story-body h3 { font-size:18px; }
-  .latest-story-body > p { font-size:13px; }
-  .latest-story-meta { font-size:11px; }
-  .latest-category-badge { font-size:10px; }
-  .latest-open-icon { width:32px; height:32px; }
+  .latest-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
   .highlight-heading h2 { font-size:27px; }
 }
 @media (max-width: 360px) {

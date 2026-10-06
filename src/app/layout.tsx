@@ -10,11 +10,15 @@ const notoSansThai = Noto_Sans_Thai({
 });
 
 export const metadata: Metadata = {
-  metadataBase: process.env.NEXT_PUBLIC_SITE_URL
-    ? new URL(process.env.NEXT_PUBLIC_SITE_URL)
-    : undefined,
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://utopianews.vercel.app",
+  ),
   title: "Utopia News — เรื่องราวเพื่อโลกที่ดีกว่า",
   description: "ค้นพบไอเดีย ผู้คน และความเปลี่ยนแปลงเพื่ออนาคตที่ดีกว่า",
+  icons: {
+    icon: "/logo/iconlogho.png",
+    apple: "/logo/iconlogho.png",
+  },
 };
 
 export default function RootLayout({
