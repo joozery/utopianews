@@ -1,3 +1,4 @@
+import { UiIcon } from "@/components/shared/ui-icon";
 import Image from "next/image";
 import Link from "@/components/shared/page-link";
 import { eventContent } from "@/data/event-content";
@@ -28,7 +29,7 @@ export function EventCard({ event }: { event: Event }) {
           <p>{event.description}</p>
           <div className={styles.cardFooter}>
             <span>{event.place}</span>
-            <span aria-hidden="true">↗</span>
+            <span aria-hidden="true"><UiIcon name="up-right" /></span>
           </div>
         </div>
       </Link>
@@ -37,7 +38,7 @@ export function EventCard({ event }: { event: Event }) {
           title={event.title}
           registrationUrl={event.registrationUrl}
         />
-        <Link href={`/events/${event.slug}`}>ดูรายละเอียด →</Link>
+        <Link href={`/events/${event.slug}`}>ดูรายละเอียด <UiIcon name="right" /></Link>
       </div>
     </article>
   );
@@ -154,7 +155,7 @@ export function EventDetail({ event }: { event: Event }) {
             <ul className={styles.checklist}>
               {content.preparation.map((item) => (
                 <li key={item}>
-                  <span aria-hidden="true">✓</span>
+                  <span aria-hidden="true"><UiIcon name="check" /></span>
                   {item}
                 </li>
               ))}
@@ -203,7 +204,7 @@ export function EventDetail({ event }: { event: Event }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            ดูสถานที่บนแผนที่ ↗
+            ดูสถานที่บนแผนที่ <UiIcon name="up-right" />
           </a>
           <div className={styles.availability}>
             <b>ติดตามประกาศกิจกรรม</b>
@@ -214,7 +215,7 @@ export function EventDetail({ event }: { event: Event }) {
       <section className={styles.other}>
         <div className={styles.sectionTitle}>
           <h2>พบกันในงานอื่น ๆ</h2>
-          <Link href="/events">ดูทั้งหมด ↗</Link>
+          <Link href="/events">ดูทั้งหมด <UiIcon name="up-right" /></Link>
         </div>
         <div className={styles.grid}>
           {events

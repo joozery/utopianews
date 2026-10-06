@@ -1,5 +1,6 @@
 "use client";
 
+import { UiIcon } from "@/components/shared/ui-icon";
 import { Dialog } from "radix-ui";
 import { useState } from "react";
 import { stories } from "@/data/stories";
@@ -23,7 +24,7 @@ export function SearchDialog({
         <Dialog.Overlay className="dialog-overlay" />
         <Dialog.Content className="search-dialog">
           <Dialog.Close className="dialog-close" aria-label="ปิดการค้นหา">
-            ×
+            <UiIcon name="close" />
           </Dialog.Close>
           <Dialog.Title>ค้นหาเรื่องราว</Dialog.Title>
           <Dialog.Description>

@@ -1,5 +1,6 @@
 "use client";
 
+import { UiIcon } from "@/components/shared/ui-icon";
 import Image from "next/image";
 import { stories } from "@/data/stories";
 import type { StorySelectionHandler } from "@/types/story";
@@ -34,7 +35,7 @@ export function HeroSection({
         </p>
       </div>
       <a href="#topics" className="scroll-explore">
-        <span className="scroll-circle">↓</span>
+        <span className="scroll-circle"><UiIcon name="down" /></span>
         <span>SCROLL TO EXPLORE</span>
       </a>
     </section>

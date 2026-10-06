@@ -1,3 +1,4 @@
+import { UiIcon } from "@/components/shared/ui-icon";
 import Link from "@/components/shared/page-link";
 import { Photo } from "@/components/shared/photo";
 import { Arrow } from "@/components/shared/arrow";
@@ -53,7 +54,7 @@ export function StoryDetail({ story }: { story: Story }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {story.photoCredit.name} / Unsplash ↗
+                  {story.photoCredit.name} / Unsplash <UiIcon name="up-right" />
                 </a>
               </>
             ) : (
@@ -73,7 +74,7 @@ export function StoryDetail({ story }: { story: Story }) {
                 </a>
               ))}
               <a href="#sources">
-                <span>↗</span>แหล่งอ้างอิง
+                <span><UiIcon name="up-right" /></span>แหล่งอ้างอิง
               </a>
             </nav>
           </aside>

@@ -1,5 +1,6 @@
 "use client";
 
+import { UiIcon } from "@/components/shared/ui-icon";
 import { events } from "@/data/home-content";
 import Image from "next/image";
 import { Arrow } from "@/components/shared/arrow";
@@ -31,7 +32,7 @@ export function EventsSection() {
             <div>
               <h3>{event.title}</h3>
               <p>{event.description}</p>
-              <p className="event-place">⌖ {event.place}</p>
+              <p className="event-place"><UiIcon name="pin" /> {event.place}</p>
               <div className="event-join-actions">
                 <EventJoin
                   title={event.title}

@@ -1,5 +1,6 @@
 "use client";
 
+import { UiIcon } from "@/components/shared/ui-icon";
 import { useState } from "react";
 import { SocialIcon } from "@/components/shared/social-icon";
 import { getShareUrl, type SharePlatform } from "@/lib/share";
@@ -76,10 +77,10 @@ export function StoryActions({
       </div>
       <div className={styles.shareUtilities}>
         <button onClick={copyLink}>
-          <span aria-hidden="true">⧉</span>คัดลอกลิงก์
+          <span aria-hidden="true"><UiIcon name="copy" /></span>คัดลอกลิงก์
         </button>
         <button onClick={nativeShare}>
-          <span aria-hidden="true">↗</span>แชร์เพิ่มเติม
+          <span aria-hidden="true"><UiIcon name="up-right" /></span>แชร์เพิ่มเติม
         </button>
       </div>
       <p role="status" aria-live="polite">

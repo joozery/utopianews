@@ -1,4 +1,5 @@
 "use client";
+import { UiIcon } from "@/components/shared/ui-icon";
 import { useState } from "react";
 import Link from "@/components/shared/page-link";
 import { stories } from "@/data/stories";
@@ -49,7 +50,7 @@ export function CategoryPage({ category }: { category?: Category }) {
           </p>
         </div>
         <span className={styles.headerMark} aria-hidden="true">
-          ↗
+          <UiIcon name="up-right" />
         </span>
       </header>
       <nav className={styles.categories} aria-label="หมวดหมู่บทความ">
@@ -65,7 +66,7 @@ export function CategoryPage({ category }: { category?: Category }) {
             {item.name}
           </Link>
         ))}
-        <Link href="/events">กิจกรรม ↗</Link>
+        <Link href="/events">กิจกรรม <UiIcon name="up-right" /></Link>
       </nav>
       {featured && (
         <Link href={`/stories/${featured.slug}`} className={styles.featured}>
@@ -78,7 +79,7 @@ export function CategoryPage({ category }: { category?: Category }) {
             <p>{featured.description}</p>
             <div>
               <span>{featured.date}</span>
-              <span>อ่านเรื่องราว ↗</span>
+              <span>อ่านเรื่องราว <UiIcon name="up-right" /></span>
             </div>
           </div>
         </Link>
@@ -123,7 +124,7 @@ export function CategoryPage({ category }: { category?: Category }) {
                 <p>{story.description}</p>
                 <div>
                   <span>{story.date}</span>
-                  <span aria-hidden="true">↗</span>
+                  <span aria-hidden="true"><UiIcon name="up-right" /></span>
                 </div>
               </div>
             </Link>
@@ -157,7 +158,7 @@ export function CategoryPage({ category }: { category?: Category }) {
               aria-controls="category-stories"
               onClick={() => setCount((value) => value + 6)}
             >
-              โหลดเรื่องราวเพิ่มเติม ＋
+              โหลดเรื่องราวเพิ่มเติม <UiIcon name="plus" />
             </button>
           )}
         </div>

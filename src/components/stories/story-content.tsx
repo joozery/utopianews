@@ -1,3 +1,4 @@
+import { UiIcon } from "@/components/shared/ui-icon";
 import Image from "next/image";
 import type { ArticleImage, StoryBlock } from "@/types/story";
 import styles from "./story-detail.module.css";
@@ -17,7 +18,7 @@ function ArticleFigure({ image }: { image: ArticleImage }) {
         {image.caption && <span>{image.caption}</span>}
         {image.credit && (
           <a href={image.credit.url} target="_blank" rel="noopener noreferrer">
-            ภาพ: {image.credit.name} / Unsplash ↗
+            ภาพ: {image.credit.name} / Unsplash <UiIcon name="up-right" />
           </a>
         )}
       </figcaption>

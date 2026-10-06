@@ -1,5 +1,6 @@
 "use client";
 
+import { UiIcon } from "@/components/shared/ui-icon";
 import { Tabs } from "radix-ui";
 import { categories, recentStories } from "@/data/stories";
 import { Arrow } from "@/components/shared/arrow";
@@ -97,7 +98,7 @@ export function LatestStoriesSection({
             aria-controls={`latest-cards-${category}`}
             onClick={() => onLoadMore()}
           >
-            โหลดเรื่องราวเพิ่มเติม <span aria-hidden="true">＋</span>
+            โหลดเรื่องราวเพิ่มเติม <span aria-hidden="true"><UiIcon name="plus" /></span>
           </button>
         ) : (
           <span className="latest-all-loaded">

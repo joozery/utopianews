@@ -1,5 +1,6 @@
 "use client";
 
+import { UiIcon } from "@/components/shared/ui-icon";
 import { usePathname } from "next/navigation";
 import { getActiveNavigationHref } from "@/lib/active-navigation";
 import { Dialog } from "radix-ui";
@@ -47,7 +48,7 @@ export function NavigationDialog({
             className={`dialog-close ${styles.close}`}
             aria-label="ปิดเมนู"
           >
-            ×
+            <UiIcon name="close" />
           </Dialog.Close>
           <Dialog.Title className={styles.intro}>
             <Logo />

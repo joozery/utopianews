@@ -1,5 +1,6 @@
 "use client";
 
+import { UiIcon } from "@/components/shared/ui-icon";
 import { Dialog } from "radix-ui";
 import { Photo } from "@/components/shared/photo";
 import type { Story } from "@/types/story";
@@ -22,7 +23,7 @@ export function ArticleDialog({
         <Dialog.Overlay className="dialog-overlay" />
         <Dialog.Content className="article-dialog">
           <Dialog.Close className="dialog-close" aria-label="ปิดบทความ">
-            ×
+            <UiIcon name="close" />
           </Dialog.Close>
           {selected && (
             <>
@@ -54,7 +55,7 @@ export function ArticleDialog({
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          {source.title} ↗
+                          {source.title} <UiIcon name="up-right" />
                         </a>
                       ))}
                     </div>
