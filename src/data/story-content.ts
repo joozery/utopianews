@@ -59,7 +59,7 @@ const images: Record<string, ArticleImage> = {
 };
 
 // Blocks are rendered in array order. A story's `content` can override the
-// default layout with any combination of headings, text, images and galleries.
+// default layout with headings, text, images, galleries, quotes and videos.
 export function getStoryContent(story: Story): StoryBlock[] {
   if (story.content) return story.content;
   const paragraphs =
@@ -80,7 +80,7 @@ export function getStoryContent(story: Story): StoryBlock[] {
       },
       { type: "paragraph", text },
     );
-    if (index === 0)
+    if (index === 0) {
       blocks.push({
         type: "image",
         image: craft
@@ -91,6 +91,11 @@ export function getStoryContent(story: Story): StoryBlock[] {
               ? images.meal
               : images.park,
       });
+      if (story.videos?.length) {
+        blocks.push({ type: "heading", id: "related-videos", text: "ชมวิดีโอประกอบเรื่องราว" });
+        for (const video of story.videos) blocks.push({ type: "video", video });
+      }
+    }
     if (index === 1)
       blocks.push(
         craft

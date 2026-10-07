@@ -31,6 +31,13 @@ export const stories: Story[] = [
     description: "พื้นที่สีเขียวที่เปลี่ยนชีวิตผู้คนได้จริง",
     date: "8 เม.ย. 2567",
     views: "9.8K",
+    videos: [{
+      provider: "youtube",
+      id: "FF0PWg5ggnI",
+      title: "พัฒนาพื้นที่สีเขียวอย่างไร ไม่ให้เป็นสวนร้างกลางเมือง | นครฮีลใจ | วันใหม่วาไรตี้",
+      caption: "วิดีโอประกอบจากรายการนครฮีลใจ ชวนมองการพัฒนาพื้นที่สีเขียวให้ผู้คนใช้ประโยชน์ได้จริงและต่อเนื่อง · ผลิตโดย Thai PBS",
+      credit: { name: "Thai PBS", url: "https://www.youtube.com/watch?v=FF0PWg5ggnI" },
+    }],
   },
   {
     slug: "spaces-that-connect",

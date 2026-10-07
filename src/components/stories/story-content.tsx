@@ -2,6 +2,7 @@ import { UiIcon } from "@/components/shared/ui-icon";
 import Image from "next/image";
 import type { ArticleImage, StoryBlock } from "@/types/story";
 import styles from "./story-detail.module.css";
+import { ArticleVideoFigure } from "./article-video";
 
 function ArticleFigure({ image }: { image: ArticleImage }) {
   return (
@@ -45,6 +46,8 @@ export function StoryContent({ blocks }: { blocks: StoryBlock[] }) {
             );
           case "image":
             return <ArticleFigure key={index} image={block.image} />;
+          case "video":
+            return <ArticleVideoFigure key={index} video={block.video} />;
           case "gallery":
             return (
               <div className={styles.galleryBlock} key={index}>

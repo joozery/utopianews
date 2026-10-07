@@ -166,7 +166,12 @@ export function EventDetail({ event }: { event: Event }) {
             <h2>คำถามที่พบบ่อย</h2>
             {content.faqs.map((item) => (
               <details key={item.question}>
-                <summary>{item.question}</summary>
+                <summary>
+                  {item.question}
+                  <span className={styles.faqToggle} aria-hidden="true">
+                    <UiIcon name="plus" />
+                  </span>
+                </summary>
                 <p>{item.answer}</p>
               </details>
             ))}
